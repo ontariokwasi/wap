@@ -6,10 +6,8 @@ header {
   border-bottom: #a79f9c solid 2px;
 }
 
-header div .banner {
-  background-image: url("images/banner.jpg");
-  padding: 15px;
-  max-height: 50px;
+.centerContent {
+  text-align: center;
 }
 
 header .content {
