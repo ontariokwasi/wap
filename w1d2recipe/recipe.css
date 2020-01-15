@@ -53,7 +53,7 @@ div .divider {
   text-decoration: line-through;
 }
 
-div > section {
+div > main {
   background-color: #f9f96ac2;
 }
 footer {
