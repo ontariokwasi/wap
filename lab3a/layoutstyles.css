@@ -1,0 +1,44 @@
+body{
+    margin: 0em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    margin: 0em;
+    background: cornflowerblue;
+    position: fixed;
+    top: 0em;
+    width: 100%;
+}
+header > nav, header >div{
+    display: inline-block;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline;
+    border: 2px solid rgb(18, 18, 31);
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: cornsilk;
+}
+.profile{
+    text-align: right;
+    float: right;
+}
+div.profile pre{
+    display: inline;
+}
+nav ul li a{
+    text-decoration: none;
+    color: cornsilk;
+}
+
+footer{
+    margin: 0em;
+    background: cornflowerblue;
+    position: fixed;
+    bottom: 0em;
+    width: 100%;
+}
+
