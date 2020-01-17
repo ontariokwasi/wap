@@ -1,13 +1,6 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Nov 27, 2019, 5:22:07 PM
-    Author     : koma9
-*/
-
+/* This is the css file for the movie review page. 
+It contains all the styling about the page and it very simple and easy to edit.
+I have learnt good ways of doing this by using the multi-comn property and even better way of using grid layout but not all are applied here. I will practice with the new HTML5 properties later*/
 
 body{
     background-image: url('images/background.png');
