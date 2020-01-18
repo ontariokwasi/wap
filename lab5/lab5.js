@@ -6,15 +6,7 @@ I have successfully completed my homework, it took me about an hour to complete 
 
 /* runs test to see if expected argument is === to value returned by function2test argument */
 function myFunctionTest(expected, found) {
-  if (found instanceof Array && expected instanceof Array) {
-    if (expected.length !== found.length)
-      return "TEST FAILED.  Expected " + expected + " found " + found;
-    for (let i = 0; i < found.length; i++) {
-      if (expected[i] !== found[i])
-        return "TEST FAILED.  Expected " + expected + " found " + found;
-    }
-    return "TEST SUCCEEDED";
-  } else if (expected === found) {
+  if (expected.toString() === found.toString()) {
     return "TEST SUCCEEDED";
   } else {
     return "TEST FAILED.  Expected " + expected + " found " + found;
@@ -102,15 +94,6 @@ function filterLongWords(wordsArray, i) {
   });
   return longwords;
 }
-/*
-Modify the jsfiddle on the map/filter/reduce slide as follows:
-
-a) multiply each element by 10; 
-
-b) return array with all elements equal to 3; 
-
-c) return the product of all elements;
-*/
 
 /* Tests All methods here */
 
@@ -153,6 +136,51 @@ console.log(
       ["mine", "empty"],
       filterLongWords(["His", "mine", "empty"], 3)
     )
+);
+
+//**Using Console.assert**//
+console.assert(
+  max(20, 10) === 20,
+  "Expected output of max(20,10) is 20 but found " + max(20, 10)
+);
+console.assert(
+  maxOfThree(5, 4, 44) === 44,
+  "Expected output of maxOfThree(5,4,44) is 44  but found " +
+    maxOfThree(5, 4, 44)
+);
+
+console.assert(
+  isVowel("a") === true,
+  "Expected output of isVowel('a') is true  but found" + isVowel("a")
+);
+
+console.assert(
+  sum([1, 2, 3, 4, 5]) === 15,
+  "FAILED! Expected output of sum([1,2,3,4,5]) is 15 but Found " +
+    sum([1, 2, 3, 4, 5])
+);
+
+console.assert(
+  multiply([1, 2, 3, 4, 5]) === 120,
+  "Expected output of multiply([1,2,3,4,5]) is 120 but found " +
+    multiply([1, 2, 3, 4, 5])
+);
+
+console.assert(
+  reverse("Hello") === "olleH",
+  "Expected output of reverse('Hello') is olleH  but found " + reverse("Hello")
+);
+
+console.assert(
+  findLongestWord(["hello", "Worlds"]) === 6,
+  "Expected output of findLongestWord(['hello','Worlds']);   is 6  but found" +
+    findLongestWord(["hello", "Worlds"])
+);
+
+console.assert(
+  filterLongWords(["His", "mine", "empty"], 3).toString() === ["mine", "empty"].toString(),
+  "Expected output of filterLongWords(['His','mine','empty'], 3);   is ['mine', 'empty']  " +
+    filterLongWords(["His", "mine", "empty"], 3)
 );
 
 /*Using Functional programming*/
