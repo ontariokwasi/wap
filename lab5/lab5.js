@@ -1,6 +1,20 @@
+/*
+Hi Professor,
+
+I have successfully completed my homework, it took me about an hour to complete all tasks but I also spent some time trying out some different ways of achieving the same results. It learnt more about the filter/reduce/map and also the assert method for testing the functions I wrote. Below is the link to my page: https://ontariokwasi.github.io/wap/lab5/ . Once you inspect my page and got to the console, you will see all my test outputs logged to the console.
+ */
+
 /* runs test to see if expected argument is === to value returned by function2test argument */
 function myFunctionTest(expected, found) {
-  if (expected === found) {
+  if (found instanceof Array && expected instanceof Array) {
+    if (expected.length !== found.length)
+      return "TEST FAILED.  Expected " + expected + " found " + found;
+    for (let i = 0; i < found.length; i++) {
+      if (expected[i] !== found[i])
+        return "TEST FAILED.  Expected " + expected + " found " + found;
+    }
+    return "TEST SUCCEEDED";
+  } else if (expected === found) {
     return "TEST SUCCEEDED";
   } else {
     return "TEST FAILED.  Expected " + expected + " found " + found;
@@ -43,7 +57,7 @@ function sum(a) {
 }
 /*#4b. multiply all the elements in an array*/
 function multiply(a) {
-  if (typeof a === object) {
+  if (typeof a === "object") {
     toatal = 1;
     for (let i = 0; i < a.length; i++) {
       elem = a[i];
@@ -61,6 +75,7 @@ function reverse(phrase) {
   for (let i = 0; i < phrase.length; i++) {
     reversed = phrase.charAt(i) + reversed;
   }
+  return reversed;
 }
 /*Finds the longest String in an array, returns null if the array is empty*/
 
@@ -119,7 +134,7 @@ console.log(
 
 console.log(
   "Expected output of multiply([1,2,3,4,5]) is 120  " +
-    myFunctionTest(120, sum([1, 2, 3, 4, 5]))
+    myFunctionTest(120, multiply([1, 2, 3, 4, 5]))
 );
 
 console.log(
@@ -139,3 +154,26 @@ console.log(
       filterLongWords(["His", "mine", "empty"], 3)
     )
 );
+
+const a = [1, 3, 5, 3, 3];
+const b = a.map(function(elem, i, array) {
+  return elem * 10;
+});
+console.log(b);
+const c = a.filter(function(elem, i, array) {
+  return elem === 3;
+});
+console.log(c);
+const d = a.reduce(function(prevValue, elem, i, array) {
+  return prevValue * elem;
+});
+console.log(d);
+
+const d2 = a.find(function(elem) {
+  return elem > 1;
+}); //3
+const d3 = a.findIndex(function(elem) {
+  return elem > 1;
+}); //1
+console.log(d2);
+console.log(d3);
