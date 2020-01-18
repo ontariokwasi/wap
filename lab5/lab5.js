@@ -155,25 +155,34 @@ console.log(
     )
 );
 
+/*Using Functional programming*/
 const a = [1, 3, 5, 3, 3];
-const b = a.map(function(elem, i, array) {
+//multiply all elements by 10;
+const b = a.map(elem => {
   return elem * 10;
 });
-console.log(b);
-const c = a.filter(function(elem, i, array) {
+
+//Get an array of all elements equal to 3
+const c = a.filter(elem => {
   return elem === 3;
 });
-console.log(c);
-const d = a.reduce(function(prevValue, elem, i, array) {
+
+//Calculate the product of all elements
+const d = a.reduce((prevValue, elem) => {
   return prevValue * elem;
 });
-console.log(d);
 
-const d2 = a.find(function(elem) {
+//find the first occurrence of an element greater than 1
+const d2 = a.find(elem => {
   return elem > 1;
 }); //3
-const d3 = a.findIndex(function(elem) {
+
+//find the index of the first occurrence of an element greater than 1;
+const d3 = a.findIndex(elem => {
   return elem > 1;
 }); //1
+console.log(b);
+console.log(c);
+console.log(d);
 console.log(d2);
 console.log(d3);
