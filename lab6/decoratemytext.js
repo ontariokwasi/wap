@@ -1,4 +1,6 @@
 window.onload = function() {
+  //"use strict";
+
   let textArea = this.document.getElementById("textArea");
   bigger = () => {
     this.setInterval(growBigger, 500);

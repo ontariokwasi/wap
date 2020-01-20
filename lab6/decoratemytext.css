@@ -27,3 +27,8 @@ textarea {
     font-size: 12pt;
     border: solid 1px grey;
 }
+
+footer{
+    position: fixed;
+    bottom: 0em;
+}
