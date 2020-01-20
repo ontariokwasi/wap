@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- The for loops have been replaced using functional programing methods on array, this way make is easy to write, read and understand the code.
+ -->
+<!-- 
+/*#4a. Sum of all the elements in an array*/
+function sum(a) {
+  if (a instanceof Array) {
+    return a.reduce((prev, next) => prev + next, 0);
+  }
+  return "Input should be an array";
+}
+
+/*#4b. multiply all the elements in an array*/
+function multiply(a) {
+  if (a instanceof Array) {
+    return a.reduce((prev, next) => prev * next, 1);
+  }
+  return "Input should be an array";
+}
+
+/*#5. reverse a given line of strings*/
+
+function reverse(phrase) {
+  return phrase.split("").reduce((prev, next) => next + prev, "");
+}
+
+/***#6. Returns an array of words longer than a given length */
+function filterLongWords(wordsArray, i) {
+  return wordsArray.filter(elem=>elem.length>i);
+} -->
+<html lang="en">
+  <head>
+    <script src="lab5b.js"></script>
+  </head>
+  <body>
+    <h3>Check Console to view results</h3>
+  </body>
+</html>
