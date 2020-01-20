@@ -5,6 +5,8 @@ window.onload = function() {
   const textArea = this.document.getElementById("textArea");
   const decorateBtn = this.document.getElementById("decorateBtn");
   const chkbox = this.document.getElementById("bling");
+  const igpay = this.document.getElementById("igpay");
+  const malkovitch = this.document.getElementById("malkovitch");
 
   //* Method definitions *//
 
@@ -34,7 +36,56 @@ window.onload = function() {
     }
   };
 
+  const isvowel = elem => {
+    const vowels = ["a", "e", "i", "o", "u"];
+    return vowels.find(v => v === elem.toLowerCase());
+  };
+  const formatWord = word => {
+    const n = word.length;
+    if (word && n > 0) {
+      for (let i = 0; i < n; i++) {
+        if (isvowel(word.charAt(i))) {
+          word = word.substring(i) + word.substring(0, i) + "-ay";
+          break;
+        }
+      }
+      return word;
+    }
+  };
+  const igpayFunc = () => {
+    const lines = textArea.value.split("\n");
+    const formatted = lines
+      .map(line =>
+        line
+          .split(" ")
+          .map(word => formatWord(word))
+          .join(" ")
+      )
+      .join("\n");
+    textArea.value = formatted.trim();
+  };
+
+  const replaceFive = word => {
+    if (word && word.length > 0) {
+      if (word.length >= 5) return "Malkovich";
+    }
+    return word;
+  };
+  const malkovitchFunc = () => {
+    const lines = textArea.value.split("\n");
+    const formatted = lines
+      .map(line =>
+        line
+          .split(" ")
+          .map(word => replaceFive(word))
+          .join(" ")
+      )
+      .join("\n");
+    textArea.value = formatted.trim();
+  };
   //Use by reference
   decorateBtn.onclick = startGrowing;
   chkbox.onchange = decorate;
+  igpay.onclick = igpayFunc;
+  malkovitch.onclick = malkovitchFunc;
 };

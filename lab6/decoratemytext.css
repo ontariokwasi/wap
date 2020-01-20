@@ -26,6 +26,7 @@ textarea {
 	font-family: monospace;
     font-size: 12pt;
     border: solid 1px grey;
+    text-align: right;
 }
 
 footer{
