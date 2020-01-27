@@ -4,7 +4,11 @@
     return this.split(' ').filter((e)=>!banned.find((a)=>a===e)).join(' ');
   };
 
-  String.prototype.filter = myfilter; // override the filter method in String;
+  const bubblesort = function(){
+      this.min()
+  }
 
-  console.log('Good boys are scarce'.filter('are', 'boys'));
+  String.prototype.myfilter = myfilter; // override the filter method in String;
+
+  console.log('Good boys are scarce'.myfilter('are', 'boys'));
 })();
