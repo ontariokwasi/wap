@@ -1,0 +1,27 @@
+{
+  "name": "wap",
+  "version": "1.0.0",
+  "description": "wap labs",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ontariokwasi/wap.git"
+  },
+  "author": "gakomeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ontariokwasi/wap/issues"
+  },
+  "homepage": "https://github.com/ontariokwasi/wap#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.18.0"
+  }
+}
