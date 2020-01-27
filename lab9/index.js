@@ -86,8 +86,8 @@
 
         it("Exercise 3: Teacher Inheritance", function() {
             let teacher = new Teacher()
-            teacher.initialize("Philip Sarfo", 30)
-            assert.equal(teacher.teach("Biology"), "Philip Sarfo is now teaching Biology")
+            teacher.initialize("John Doe", 30)
+            assert.equal(teacher.teach("Biology"), "John Doe is now teaching Biology")
         })
     })
 })()
