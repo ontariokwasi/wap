@@ -1,5 +1,33 @@
+button{
+    background-color: cornflowerblue;
+    font-weight: bold;
+}
 .controls{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    max-width: 30%;
+}
+
+.controls input{
+    display: block;
+}
+
+.circle{
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    height: 50px;
+    display: inline-block;
+}
+
+.circles{
+    text-align: center;
+}
+
+.middle{
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -17,7 +17,8 @@ $(function() {
         h = parseInt(h) + 1;
         m = '00';
       }
-      const stringtime = h.toString().padStart(2, 0)+':'+m.toString().padStart(2, 0)+':'+s.toString().padStart(2, 0);
+      const stringtime = h.toString().padStart(2, 0)+':'+
+      m.toString().padStart(2, 0)+':'+s.toString().padStart(2, 0);
       $timediv.text(stringtime);
     };
     const start = () => {
